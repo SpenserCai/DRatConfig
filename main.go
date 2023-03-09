@@ -3,7 +3,7 @@
  * @Date: 2023-03-08 09:58:34
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-03-09 09:57:07
+ * @LastEditTime: 2023-03-09 10:08:33
  * @Description: file content
  */
 package main
@@ -166,7 +166,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	fmt.Printf("Tx Hash:%s", tx.Hash().Hex())
+	fmt.Printf("Tx Hash:%s\n", tx.Hash().Hex())
 	// 等待交易确认
 	ctx := context.Background()
 	receipt, err := bind.WaitMined(ctx, client, tx)
